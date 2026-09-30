@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+projects.json
+dist/
+output/
+*.log
+
+# capture/（Playwright 官方腳手架建置）的原始擷取檔跟測試報告，不是最終成品
+capture/output/
+capture/test-results/
+capture/playwright-report/
+

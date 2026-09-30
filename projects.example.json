@@ -1,0 +1,23 @@
+{
+  "_comment": "複製這個檔案成 projects.json（同一層）。projects.json 已加進 .gitignore，因為路徑跟部分欄位是每台機器自己的。每個專案一筆記錄，是這個工具對這個專案的唯一真相來源（不再有各專案自己的 config.json）。",
+  "projects": [
+    {
+      "name": "sam-showcase",
+      "path": "D:\\Sam_git\\sam-showcase",
+      "devServerUrl": "http://localhost:5173/",
+      "liveUrl": "https://example.com",
+      "brandKit": { "colors": { "background": "", "accent": "", "dark": "" }, "fonts": {}, "logoPath": "" },
+      "capture": {
+        "_comment": "sectionHeadingText/heroText 是 capture/ 擷取流程用來判斷「捲到哪裡」「內容是否已可見」的文字比對依據，換一個專案要填這個專案首頁真正會出現的文字，不能沿用範例值",
+        "sectionHeadingText": "",
+        "heroText": ""
+      },
+      "ga4PropertyId": "",
+      "measurementId": "",
+      "searchConsoleSiteUrl": "",
+      "gtmContainerId": "",
+      "gtmPublicId": "",
+      "gtmAccountId": ""
+    }
+  ]
+}

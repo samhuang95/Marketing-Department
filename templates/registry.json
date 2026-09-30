@@ -1,0 +1,30 @@
+{
+  "templates": [
+    {
+      "id": "screenshot-deck",
+      "type": "image",
+      "aspectRatio": "1440:900",
+      "platform": "web / social share / README",
+      "durationRange": null,
+      "description": "在首頁幾個自然捲動位置拍攝 viewport 截圖，加上瀏覽器窗框後輸出。適合快速產出一組展示網站畫面的靜態圖。品牌色（背景、強調色、深色）從實際渲染畫面取樣得到，不是憑印象配色。",
+      "capture": "capture/flows/screenshot-deck.spec.ts",
+      "render": "render/compose-screenshot-deck.mjs",
+      "requiresProjectConfig": ["capture.sectionHeadingText", "brandKit.colors（沒設定會退回預設色並印警告）"]
+    },
+    {
+      "id": "scroll-demo-video",
+      "type": "video",
+      "aspectRatio": "16:9",
+      "platform": "web / social",
+      "durationRange": "5-10s（視頁面實際長度而定，不強制拉長湊時間）",
+      "description": "真實錄製一段捲動首頁的畫面（Playwright recordVideo），轉檔並裁掉頁面載入造成的前導空白後輸出。目前是最小可行版本：純錄影 + FFmpeg 編碼，還沒有 Remotion 疊字/轉場/品牌覆蓋層——先求「真的能產出一支可用的網站導覽影片」，這些是後續可以疊加的加強項目，不是這次的必要條件。",
+      "capture": "capture/flows/scroll-video.spec.ts",
+      "render": "render/encode-scroll-video.mjs",
+      "requiresProjectConfig": ["capture.heroText"],
+      "knownLimitations": [
+        "沒有 Remotion 品牌疊字/轉場，是純錄影+轉檔",
+        "捲動節奏固定 24 步、每步 180ms，還沒有依內容長度自動調整步數/停留時間"
+      ]
+    }
+  ]
+}

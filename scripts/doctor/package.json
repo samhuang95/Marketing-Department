@@ -1,0 +1,14 @@
+{
+  "name": "doctor",
+  "version": "1.0.0",
+  "description": "檢查行銷工具的環境狀態（Playwright/FFmpeg/Junction/.env）。純檢查腳本，不需要 Claude 介入。依賴裝在 repo 根目錄，不在這裡。",
+  "type": "module",
+  "main": "index.mjs",
+  "bin": {
+    "market-agent-doctor": "index.mjs"
+  },
+  "scripts": {
+    "start": "node index.mjs"
+  },
+  "license": "ISC"
+}
